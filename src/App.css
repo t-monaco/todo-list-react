@@ -34,6 +34,7 @@
     width: 260px;
     padding: 15px;
     margin: 25px;
+    margin-left: 0;
     font-size: 20px;
     color: #ccc;
     background-color: #000;
@@ -71,16 +72,20 @@
     border-radius: 50%;
 }
 
+.button-complete {
+    color: #ff6c6c;
+}
+
 .button-edit {
     color: #e2d029;
-    margin-left: 10px;
+    margin: 0 10px;
 }
 
 .button-delete {
     color: lightseagreen;
 }
 
-.complete {
+.completed {
     text-decoration-style: solid;
     text-decoration-line: line-through;
     text-decoration-color: #ff6c6c;
