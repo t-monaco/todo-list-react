@@ -33,22 +33,25 @@ const TodosList = ({ todos, setTodos, setEditTodo }) => {
                     />
                     <div>
                         <button
-                            className="button-complete task-button"
+                            className="icon button-complete task-button"
                             onClick={() => handleCompleted(todo)}
                         >
-                            <i className="fa fa-check-circle"></i>
+                            {/* <i className="fa fa-check-circle"></i> */}
+                            <i className="lni lni-checkmark-circle"></i>
                         </button>
                         <button
-                            className="button-edit task-button"
+                            className="icon button-edit task-button"
                             onClick={() => handleEdit(todo)}
                         >
-                            <i className="fa fa-edit"></i>
+                            {/* <i className="fa fa-edit"></i> */}
+                            <i className="lni lni-pencil"></i>
                         </button>
                         <button
-                            className="button-delete task-button"
+                            className="icon button-delete task-button"
                             onClick={() => handleDelete(todo)}
                         >
-                            <i className="fa fa-trash"></i>
+                            {/* <i className="fa fa-trash"></i> */}
+                            <i className="lni lni-cross-circle"></i>
                         </button>
                     </div>
                 </li>

@@ -36,7 +36,7 @@ const Form = ({ input, setInput, todos, setTodos, editTodo, setEditTodo }) => {
     };
 
     return (
-        <form action="" onSubmit={onFormSubmit}>
+        <form action="" onSubmit={onFormSubmit} className='task-form'>
             <input
                 className="task-input"
                 type="text"
@@ -45,8 +45,9 @@ const Form = ({ input, setInput, todos, setTodos, editTodo, setEditTodo }) => {
                 required
                 onChange={onInputChange}
             />
-            <button className="button-add" type="submit">
-                { editTodo ? 'OK' : 'Add' }
+            <div className="round-shape"></div>
+            <button className="button button-add" type="submit">
+                {editTodo ? 'OK' : <i className="lni lni-plus"></i>}
             </button>
         </form>
     );

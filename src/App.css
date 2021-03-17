@@ -1,10 +1,18 @@
+:root {
+    --color-primary: #EAD76E;
+    --color-secondary: #AC4C53;
+    --color-tertiary: #282846;
+    --color-extra: #d8ebe4;
+}
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Exo', sans-serif;
 }
 
 .container {
-    background: linear-gradient(to right bottom, #e1b382, #c89666);
+    background: linear-gradient(to right bottom, #054971, #25bb84);
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -13,7 +21,7 @@
 }
 
 .app-wrapper {
-    background-color: #12343b;
+    background-color: #f1f1f1;
     min-width: 450px;
     min-height: 650px;
     padding: 30px;
@@ -24,41 +32,74 @@
 }
 
 .header h1 {
-    color: #fff;
+    color: #000;
     text-align: center;
     margin: 30px 0;
+    font-weight: 600;
+}
+
+.task-form {
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .task-input {
     outline: none;
     width: 260px;
     padding: 15px;
-    margin: 25px;
-    margin-left: 0;
+    margin: 25px 0;
     font-size: 20px;
-    color: #ccc;
-    background-color: #000;
-    border: 1px solid #c89666;
-    border-radius: 10px;
+    color: #000;
+    background-color: #ababab;
+    border: none;
+    border-radius: 50px 0 0 50px;
+    flex: 1;
+    margin-right: -30px;
+}
+
+.task-input::placeholder {
+    color: #000;
+}
+
+.round-shape {
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 0;
 }
 
 .button-add {
-    width: 70px;
-    padding: 15px;
-    font-size: 20px;
-    border-radius: 10px;
-    border: 0;
-    background-color: #f1af71;
+    align-items: center;
+    background-color: #39f1d7;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px #ccc;
     cursor: pointer;
+    display: flex;
+    font-size: 20px;
+    height: 60px;
+    justify-content: center;
+    padding: 15px;
+    width: 60px;
+    z-index: 2;
+}
+
+.button-add:hover {
+    transform-origin:  center;
+    transform: scale(1.1);
 }
 
 .list-item {
     display: flex;
     margin: 20px 0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 50px;
+    background-color: #fff;
     padding: 10px;
     max-height: 30px;
+    box-shadow: 0px 3px 14px #ccc;
 }
 
 .button-complete,
@@ -73,7 +114,7 @@
 }
 
 .button-complete {
-    color: #ff6c6c;
+    color: lightseagreen;
 }
 
 .button-edit {
@@ -82,21 +123,25 @@
 }
 
 .button-delete {
-    color: lightseagreen;
+    color: #ff6c6c;
+}
+
+.icon:hover {
+    transform-origin: center;
+    transform: scale(1.04);
 }
 
 .completed {
     text-decoration-style: solid;
     text-decoration-line: line-through;
     text-decoration-color: #ff6c6c;
-    opacity: 0.6;
+    opacity: 0.3;
 }
 
 .list {
     width: 220px;
-    background-color: #12343b;
     border: none;
-    color: #ccc;
+    color: #000;
     font-size: 20px;
     padding-left: 10px;
     padding-right: 15px;
